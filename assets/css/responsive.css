@@ -1,0 +1,140 @@
+/* mobile and tablet  */
+@media (max-width: 1023px) {
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+
+  .header__cart-list {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 100%;
+    padding: 0 calc((100% - 640px) / 2);
+  }
+
+  .header__cart-list::before {
+    display: none;
+  }
+
+  .header__sort-bar {
+    display: flex;
+  }
+
+  .app__container {
+    margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+  }
+
+  .app__content {
+    padding-top: 12px;
+  }
+
+  .mobile-category {
+    display: block;
+  }
+}
+
+/* tablet  */
+@media (min-width: 740px) and (max-width: 1023px) {
+  :root {
+    --header-height: 68px;
+    --navbar-height: 0px;
+  }
+
+  .hide-on-tablet {
+    display: none;
+  }
+
+  .header__cart {
+    width: 80px;
+  }
+
+  .header__logo {
+    display: none;
+  }
+}
+
+/* mobile  */
+@media (max-width: 739px) {
+  :root {
+    --header-height: 54px;
+    --navbar-height: 0px;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .header-with-search {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .header__cart {
+    width: unset;
+  }
+
+  .header__logo {
+    width: unset;
+  }
+
+  .header__logo-img {
+    width: 110px;
+  }
+
+  .header__mobile-search {
+    display: block;
+  }
+
+  .header__search {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    padding: 0 8px;
+    box-shadow: 0 1px 4px 0 rgb(0, 0, 0, 10%);
+    --go-from: calc(var(--header-height) / 2);
+    --go-to: var(--header-height);
+    animation: slideIn linear 0.3s;
+  }
+
+  .header__mobile-search-checkbox:checked ~ .header__search {
+    display: flex;
+  }
+
+  .header__search-history {
+    width: 100%;
+  }
+
+  .app__content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .footer__content {
+    padding: 0 16px;
+  }
+
+  .footer__heading {
+    text-align: center;
+  }
+
+  .footer-item__link {
+    justify-content: center;
+  }
+
+  .footer__download {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
